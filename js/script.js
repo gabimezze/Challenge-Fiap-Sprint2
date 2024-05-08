@@ -1,3 +1,4 @@
+    // Código do Chatbot
     window.watsonAssistantChatOptions = {
     integrationID: "26e70437-eaa1-448e-bcf9-ba11660abc82",
     region: "au-syd",

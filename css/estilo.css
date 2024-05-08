@@ -1,6 +1,10 @@
+
 /* Cabeçalho */
 
+
 * {
+    margin: 0;
+    padding: 0;
     text-decoration: none;
     box-sizing: border-box;
 }
@@ -26,7 +30,6 @@ header{
     margin-top: 10px;
 }
 .link{
-    text-decoration: none;
     align-items: center;
     display: inline-flex;
     padding: 40px;
