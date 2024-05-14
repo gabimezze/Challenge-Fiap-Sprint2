@@ -9,3 +9,22 @@
     const t=document.createElement('script');
     t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
     document.head.appendChild(t);});
+
+    // Ocultar/mostrar dúvidas
+    function alternarTexto1() {
+        var texto = document.getElementById("ocultarTexto1");
+        if (texto.style.display === "none") {
+            texto.style.display = "block";
+        } else {
+            texto.style.display = "none";
+        }
+    }
+
+    function alternarTexto2() {
+        var texto = document.getElementById("ocultarTexto2");
+        if (texto.style.display === "none") {
+            texto.style.display = "block";
+        } else {
+            texto.style.display = "none";
+        }
+    }
