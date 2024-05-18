@@ -17,28 +17,31 @@
             </a>
         </div>
         <h1
-        style="text-align: left;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
-        > 
-        Porto
+        > Porto
         </h1>
         <hr>
     </header>
 
     <!--Área cadastro-->
-    <h1 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" id="cadastro"
-    >
-    Cadastrar Conta
-    </h1>
-    <p style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 400;"
-    >
-    Preencha seus dados de acesso
-    </p>
+    <div class="form-cadastro">
+    <div class="textoCadastroLogin">
+    <h1> Cadastrar Conta</h1>
+        <p>Preencha os dados indicados </p>
         <form id="registerForm" action="cadastrar.php" method="post">
             <label for="newUsername">CPF ou CNPJ</label><br>
             <input type="text" id="newUsername" name="newUsername"><br>
             <button type="submit">Cadastrar</button>
+            <div>
+                <input
+                type="checkbox"
+                name="txtLembrar"
+                id="idLembrar"
+                value="lembrete"
+                />
+            <label for="idLembrar">Lembrar-me</label>
         </form>
-
-        <p>Já tem uma conta? <a href="../html/login.html">Faça login aqui</a></p>
+        <p>Já tem uma conta?<a href="../html/login.html"><span class="facaLoginCadastro"> Faça login aqui </span></a></p>
+    </div>
+    </div>
 </body>
 </html>

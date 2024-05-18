@@ -1,3 +1,4 @@
+    
     // Código do Chatbot
     window.watsonAssistantChatOptions = {
     integrationID: "26e70437-eaa1-448e-bcf9-ba11660abc82",
@@ -28,3 +29,178 @@
             texto.style.display = "none";
         }
     }
+
+    // IDENTIFICAÇÃO CADASTRO E SALVAR
+    function validarCPF(cpf) {
+        cpf = cpf.replace(/[^\d]+/g, '');
+        if (cpf.length !== 11 || /^(\d)\1{10}$/.test(cpf)) return false;
+    
+        let soma = 0;
+        let resto;
+        for (let i = 1; i <= 9; i++) soma += parseInt(cpf.substring(i - 1, i)) * (11 - i);
+        resto = (soma * 10) % 11;
+        if (resto === 10 || resto === 11) resto = 0;
+        if (resto !== parseInt(cpf.substring(9, 10))) return false;
+    
+        soma = 0;
+        for (let i = 1; i <= 10; i++) soma += parseInt(cpf.substring(i - 1, i)) * (12 - i);
+        resto = (soma * 10) % 11;
+        if (resto === 10 || resto === 11) resto = 0;
+        if (resto !== parseInt(cpf.substring(10, 11))) return false;
+    
+        return true;
+    }
+    
+    function validarCNPJ(cnpj) {
+        cnpj = cnpj.replace(/[^\d]+/g, '');
+        if (cnpj.length !== 14) return false;
+    
+        let tamanho = cnpj.length - 2;
+        let numeros = cnpj.substring(0, tamanho);
+        let digitos = cnpj.substring(tamanho);
+        let soma = 0;
+        let pos = tamanho - 7;
+        for (let i = tamanho; i >= 1; i--) {
+            soma += numeros.charAt(tamanho - i) * pos--;
+            if (pos < 2) pos = 9;
+        }
+        let resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+        if (resultado !== parseInt(digitos.charAt(0))) return false;
+    
+        tamanho += 1;
+        numeros = cnpj.substring(0, tamanho);
+        soma = 0;
+        pos = tamanho - 7;
+        for (let i = tamanho; i >= 1; i--) {
+            soma += numeros.charAt(tamanho - i) * pos--;
+            if (pos < 2) pos = 9;
+        }
+        resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+        if (resultado !== parseInt(digitos.charAt(1))) return false;
+    
+        return true;
+    }
+    
+    function identificarEGuardarCPFouCNPJ(input) {
+        const cpfOuCnpj = input.replace(/[^\d]+/g, '');
+    
+        if (cpfOuCnpj.length === 11 && validarCPF(cpfOuCnpj)) {
+            console.log('CPF válido:', cpfOuCnpj);
+            // Salvar CPF
+        } else if (cpfOuCnpj.length === 14 && validarCNPJ(cpfOuCnpj)) {
+            console.log('CNPJ válido:', cpfOuCnpj);
+            // Salvar CNPJ
+        } else {
+            console.log('Número inválido');
+        }
+    }
+    // Exemplo de uso:
+    const input = '123.456.789-09'; 
+    identificarEGuardarCPFouCNPJ(input);
+    
+
+    // DÚVIDAS - PERGUNTAS E RESPOSTAS
+    document.addEventListener('DOMContentLoaded', () => {
+        loadQuestions();
+    });
+    
+    function addQuestion() {
+        const questionInput = document.getElementById('questionInput');
+        const questionText = questionInput.value.trim();
+        if (questionText === '') {
+            alert('Por favor, faça uma pergunta.');
+            return;
+        }
+    
+        const question = {
+            id: Date.now(),
+            text: questionText,
+            answer: ''
+        };
+    
+    saveQuestion(question);
+        questionInput.value = '';
+        renderQuestions();
+    }
+    
+    function saveQuestion(question) {
+        let questions = getQuestions();
+        questions.push(question);
+        localStorage.setItem('questions', JSON.stringify(questions));
+    }
+    
+    function getQuestions() {
+        const questions = localStorage.getItem('questions');
+        return questions ? JSON.parse(questions) : [];
+    }
+    
+    function loadQuestions() {
+        renderQuestions();
+    }
+    
+    function renderQuestions() {
+        const containerDuvidas = document.getElementById('containerDuvidas');
+        questionsContainer.innerHTML = '';
+        const questions = getQuestions();
+    
+        questions.forEach(question => {
+            const questionDiv = document.createElement('div');
+            questionDiv.className = 'question';
+    
+            const questionTitle = document.createElement('h3');
+            questionTitle.textContent = question.text;
+            questionDiv.appendChild(questionTitle);
+    
+            const answerTextarea = document.createElement('textarea');
+            answerTextarea.placeholder = 'Responda aqui...';
+            answerTextarea.value = question.answer;
+            answerTextarea.addEventListener('input', (event) => {
+                updateAnswer(question.id, event.target.value);
+            });
+            questionDiv.appendChild(answerTextarea);
+    
+            const saveButton = document.createElement('button');
+            saveButton.textContent = 'Salvar Resposta';
+            saveButton.addEventListener('click', () => {
+                updateAnswer(question.id, answerTextarea.value);
+            });
+            questionDiv.appendChild(saveButton);
+    
+            questionsContainer.appendChild(questionDiv);
+        });
+    }
+    
+    function updateAnswer(questionId, answer) {
+        let questions = getQuestions();
+        questions = questions.map(question => {
+            if (question.id === questionId) {
+                return {
+                    ...question,
+                    answer: answer
+                };
+            }
+            return question;
+        });
+        localStorage.setItem('questions', JSON.stringify(questions));
+        renderQuestions();
+    }
+
+
+    //function submitAnswer(questionId) {
+        //if (answerText.trim() !== '') {
+            // Cria um novo elemento de resposta
+           // const answerElement = document.createElement('p');
+           // answerElement.classList.add('answer');
+           // answerElement.textContent = answerText;
+    
+            // Adiciona a nova resposta à lista de respostas
+           // const answersDiv = document.getElementById(`answers${questionId}`);
+           // answersDiv.appendChild(answerElement);
+    
+            // Limpa o campo de entrada
+           // answerInput.value = '';
+       // } else {
+        //    alert('Por favor, insira uma resposta.');
+      //  }
+   // }
+        

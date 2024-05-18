@@ -17,9 +17,7 @@
             </a>
         </div>
         <h1
-        style="text-align: left;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
-        > 
-        Porto
+        > Porto
         </h1>
         <nav>
             <ul>
@@ -34,21 +32,28 @@
     </header>
 
     <!--Conteúdo-->
-    <span class="duvidas-frequentes"
-        ><h1> DÚVIDAS FREQUÊNTES </h1>
-    </span>
-<br>
-    <div class="titulos-duvidas">
-    <h2> Como faço para me cadastrar? </h2>
+    <div class="containerDuvidas">
+        <div class="duvidasFrequentes">
+            <h1> DÚVIDAS FREQUÊNTES </h1>
+        </div>
+    <div class="duvida-form">
+        <input type="text" id="questionInput" placeholder="Faça sua pergunta">
+        <button class="botaoAddPergunta" onclick="addQuestion()">Adicionar</button>
+    </div>
+        <div id="questionsContainer"></div>
+    </div>
+
+
+    <!--<h2> Como faço para me cadastrar? </h2>
 
     <button class="mais-ajuda1" onclick="alternarTexto1()">Mais..</button>
     <div id="ocultarTexto1" class="duvida-cadastrar">
         <p>
-            Vá para a página "Home" e clique no botão "Cadastre-se" ou <a href="../html/cadastro.html">clique aqui!</a>
+            Na página "Home" você encontrará o botão "Cadastre-se", é so clickar! ou <a href="../html/cadastro.html">clique aqui!</a>
         </p>
     </div>
 </div>
-<br>
+
     <div class="titulos-duvidas">
         <h2> Como posso fazer um agendamento? </h2>
 
@@ -58,6 +63,6 @@
                 Para fazer um agendamento, você pode falar com nossa assistente virtual no canto inferior direito site!
             </p>
         </div>
-    </div>
+    </div>-->
 </body>
 </html>

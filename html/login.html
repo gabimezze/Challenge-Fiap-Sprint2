@@ -17,33 +17,29 @@
                 </a>
             </div>
             <h1
-            style="text-align: left;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
-            > 
-            Porto
+            > Porto
             </h1>
             <hr>
         </header>
 
     <!--Área login-->
-    <h2 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
-        >
-        Acesso à Conta
-    </h2>
-
+    <div class="form-cadastro">
+    <div class="textoCadastroLogin">
+        <h1>Acesso à Conta</h1>
+        <p>Preencha seus dados de acesso</p>
     <form id="loginForm">
-        <label style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 400;"for="username"
+        <label for="username"
             > CPF ou CNPJ
         </label><br>
     <input type="text" id="username" name="username"><br>
+    <button type="submit">Entrar</button>
     <input type="checkbox" id="rememberMe" name="rememberMe"
         > Lembrar-me<br>
-    <button type="submit">Entrar</button>
 </form>
 
-    <p> Não tem uma conta 
-        <a href="../html/cadastro.html"
-            > Cadastre-se aqui
-        </a>
+    <p>Não tem uma conta?<a href="../html/cadastro.html"><span class="facaLoginCadastro"> Cadastre-se</span></a>
     </p>
+    </div>
+    </div>
 </body>
 </html>
