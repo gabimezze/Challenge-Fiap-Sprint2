@@ -1,4 +1,3 @@
 ## ACESSO FIGMA
-EMAIL: gabrielagomescezar@gmail.com
-##
-SENHA: hoxkIr-pyfzoz-4tytwi
+<p> EMAIL: gabrielagomescezar@gmail.com </p>
+<p> SENHA: hoxkIr-pyfzoz-4tytwi </p>
