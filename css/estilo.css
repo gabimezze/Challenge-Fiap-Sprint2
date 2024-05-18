@@ -243,7 +243,7 @@ body, html {
 }
 
 
-/* SOBRE O APP */                /**/                      /**/
+/* SOBRE NÓS */                /**/                      /**/
 
 .frase-efeito{
     padding-top: 10%;
@@ -275,13 +275,13 @@ body, html {
 
 .titulo-objetivo{
     color: rgb(88, 88, 88);
-    padding-left: 23%;
+    padding-left: 21%;
     padding-top: 4%;
     font-size: 20px;
 }
 
 .texto-objetivo{
-    padding-left: 23%;
+    padding-left: 21%;
     font-size: 19px;
 }
 
@@ -297,141 +297,164 @@ body, html {
     border-top-right-radius: 20px;
     height: auto;
 }
+/*PROPAGANDA*/
+.services {
+    padding: 20px;
+    text-align: center;
+}
+.cards{
+    margin-right: 20%;
+}
+.services h2 {
+    margin-top: 5%;
+    font-size: 2em;
+    background-image: linear-gradient(#67caf8,#1a5ec5,#67caf8);
+    background-clip: text;
+    color: transparent;
+
+}
+.services hr{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 40%;
+    margin-right: 0;
+    width: 20%;
+}
+
+.service-card {
+    background: rgb(241, 240, 240);
+    margin: 10px;
+    margin-top: 2%;
+    padding: 15px;
+    border-radius: 8px;
+    display: inline-block;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+}
+.service-card:hover{
+    background: #a5c9f8;
+    transform: translateY(-10px);
+}
+.card-oleo{
+    padding-top: 8%;
+}
+
+.service-card img {
+    width: 100%;
+    border-radius: 8px;
+    padding-bottom: 2%;
+}
+
+.service-card h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+}
+
+.service-card p {
+    color: #464545;
+}
+
+.services footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 26%;
+    margin-top: 6%;
+}
+.services footer p{
+    text-align: left;
+}
 
 /* PLANOS E PREÇOS */                /**/                      /**/
-.titulo-planos{
-    text-align: center;
-    padding-bottom: 0;
-    padding-top: 0;
-    margin-bottom: 0;
-    margin-top: 0;
-    display: block;
-    font-size: 13px;
-}
-hr {
+.planos hr {
     margin-top: 0; 
     margin-bottom: 0;
     padding-top: 0;
     padding-bottom: 0;
 }
-.texto-planos{
-    text-align: left;
-    font-weight: 500;
-    font-size: 17px;
-    padding-left: 5%;
-    display: block;
-    padding-top: 0;
-    padding-bottom: 0;
-    margin: 0;
-}
-.valor-mes{
+.containerPlanos {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     text-align: center;
-    color: #084096;
-    display: block;
-    font-size: 16px;
-    padding-bottom: 0;
+    margin-top: 3%;
+}
+
+.planos {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.plano {
+    background: #e9e5e5;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+}
+
+.titulo-escolha{
+    background-image: linear-gradient(to left,#67caf8,#3c78d3,#67caf8);
+    background-clip: text;
+    color: transparent;
+}
+.plano h2 {
+    margin-bottom: 10px;
+}
+.beneficios{
+    text-align: left;
+    padding-left: 38%;
+    font-weight: 400;
+    font-size: 20px;
+}
+.preco{
+    font-size: 30px;
+    font-weight: 500;
 }
 .mes{
-    color: rgb(104, 104, 104);
     font-weight: 400;
+    color: rgb(92, 92, 92);
 }
-.preco-total{
+
+.plano button{
+    padding: 9px 23px;
+    background-color: #00AEEF;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 15px;
     font-weight: 500;
-    text-align: center;
-    color: #084096;
-    display:block;
-    padding-top: 0;
+    cursor: pointer;
 }
-.container{
-    max-width: 100%;
-    margin: 1%;
+.plano button:hover{
+    background-color: #29569b;
+}
+
+.hidden {
+    display: none;
+}
+
+#payment-section {
+    margin-top: 20px;
+}
+
+#payment-form {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    box-sizing: border-box;
-    align-items: center;
-}
-.fundo-plano{
-    height: 350px;
-    width: 320px;
-}
-@media (max-width: 700px) {
-    .fundo-plano {
     flex-direction: column;
-    align-items: center;
-    }
+    align-items: flex-start;
 }
-.background-planos{
-    background-image: linear-gradient(rgb(135, 183, 255),rgb(0, 73, 184));
-    max-width: 100%;
-    height: 200vh;
+
+#payment-form label {
+    margin-top: 10px;
+}
+
+#payment-form input {
+    padding: 8px;
+    margin-top: 5px;
     width: 100%;
-    background-size: cover;
-    margin: 0;
-}
-
-/* silver */                           /**/                        /**/ 
-.fundo-plano:nth-child(1){
-    background-color: #E5ECEB;
-    border-radius: 3%;
-    width: 12%;
-}
-.botao-silver a{
-    border: none;
-    background-color:#34c3f7;
-    color: #ffffff;
-    padding: 12px 70px;
-    font-size: 1rem;
-    border-radius: 30px;
-    text-align: center;
-    margin-bottom: 5%;
-    cursor: pointer;
-    display: inline-block;
-    margin-left: 14%;
-    font-weight:bolder;
-    margin-top: 2%;
-}
-
-/*gold*/                           /**/                         /**/ 
-.fundo-plano:nth-child(2){
-    background-color: #E5ECEB;
-    border-radius: 3%;
-}
-.botao-gold a{
-    border: none;
-    background-color:#34c3f7;
-    color: #ffffff;
-    padding: 12px 70px;
-    font-size: 1rem;
-    border-radius: 30px;
-    text-align: center;
-    margin-bottom: 5%;
-    cursor: pointer;
-    display: inline-block;
-    margin-left: 14%;
-    font-weight:bolder;
-    margin-top: 2%;
-}
-
-/*diamond*/                /**/                      /**/
-.fundo-plano:nth-child(3){
-    background-color: #E5ECEB;
-    border-radius: 3%;
-}
-.botao-diamond a{
-    border: none;
-    background-color:#34c3f7;
-    color: #ffffff;
-    padding: 12px 70px;
-    font-size: 1rem;
-    border-radius: 30px;
-    text-align: center;
-    margin-top: 0;
-    cursor: pointer;
-    display: inline-block;
-    padding: 12px 70px;
-    margin-left: 14%;
-    font-weight:bolder;
+    box-sizing: border-box;
 }
 
 /* INTEGRANTES */             /*/                           /*/
@@ -440,8 +463,24 @@ hr {
         height: 100%; 
     }
 }
+.containerIntegrantes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: 26%;
+}
+.titulo-integrantes hr{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 40%;
+    margin-right: 0;
+    width: 20%;
+}
 .titulo-integrantes{
-    background-image: linear-gradient(rgb(14, 48, 158), rgb(77, 162, 241));
+    background-image: linear-gradient(rgb(14, 48, 158), rgb(77, 162, 241), rgb(14, 48, 158));
     background-clip: text;
     color: transparent;
     text-align: center;
@@ -451,46 +490,38 @@ hr {
     padding-bottom: 2%;
     padding-top: 0;
 }
+.integrante h3{
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: #333;
+}
 .integrante,.repositorio{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #93bff8;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(1, 57, 177, 0.692);
-    width: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     text-align: center;
-    margin-top: -8%;
-    height: 20%;
-    margin-left: 8%;
-    margin-right: 6%;
-    margin-top: 0;
-    gap: 2px;
+    padding: 20px;
+    transition: transform 0.2s;
+}
+.repositorio:hover{
+    transform: translateY(-10px);
+}
+.integrante:hover{
+    transform: translateY(-10px);
 }
 
 .integrante img {
     width: 100%;
-    border-radius: 5px;
-    margin-bottom: 0;
-    margin-top: 5%;
+    height: auto;
+    border-radius: 50%;
+    max-width: 150px;
 }
-.integrante a{
-    background-color: #ffff;
-    color: #1961cc;
-    font-weight: 700;
-    border: none;
-    border-radius: 3px;
-    padding: 2% 2%;
-    margin-top: 6%;
-    cursor: pointer;
-    margin-right: 2%;
-}
+
 .repositorio img{
     width: 100%;
-    border-radius: 5px;
-    margin-bottom: 46%;
-    margin-top: 20%;
+    height: auto;
+    border-radius: 50%;
+    max-width: 150px;
     cursor: pointer;
 }
 
@@ -498,21 +529,22 @@ hr {
     margin: 0;
     font-size: 1.1em;
     font-weight: 500;
-    color: #ffffff;
+    color: #000000;
+    margin-bottom: 4%;
 }
 .repositorio p{
     margin: 0;
     font-size: 1.1em;
     font-weight: 500;
-    color: #ffffff;
+    color: #000000;
+    margin-bottom: 4%;
 }
 
 @media (max-width: 600px) {
-    .container {
+    .containerIntegrantes {
         flex-direction: column;
         align-items: center;
     }
-
     .integrante {
         width: 90%;
     }

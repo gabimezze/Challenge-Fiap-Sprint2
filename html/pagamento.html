@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <link rel="shortcut icon" href="../img/porto-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <script src="../js/script.js"></script>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <div class="background-planos">
+        <header class="titulo-com-logo">
+            <div class="logo-porto">
+                <a>
+                <img src="../img/logo-porto.png" alt="logo-porto">
+                </a>
+            </div>
+            <h1
+            > Porto
+            </h1>
+
+    <!--PAGAMENTO-->
+    <div id="payment-section" class="hidden">
+        <h2>Pagamento</h2>
+        <p>Você selecionou o <span id="selected-plano"></span> plano.</p>
+        <form id="payment-form">
+            <label for="card-number">Número do Cartão:</label>
+            <input type="text" id="card-number" required>
+            <label for="expiry-date">Data de Validade:</label>
+            <input type="text" id="expiry-date" required>
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" required>
+            <button type="submit">Pagar</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -24,7 +24,7 @@
             <ul>
                 <li class="link"><a href="../html/index.html">Home</a></li>
                 <li class="link"><a href="../html/ajuda.html">Ajuda</a></li>
-                <li class="link"><a href="../html/app.html">Sobre o app</a></li>
+                <li class="link"><a href="../html/sobre.html">Sobre Nós</a></li>
                 <li class="link"><a class="active" href="../html/planoseprecos.html">Planos e preços</a></li>
                 <li class="link"><a href="../html/integrantes.html">Integrantes</a></li>
             </ul>
@@ -32,114 +32,56 @@
     <hr>
     </header>
 
-    <!--CONTEÚDO-->
-        <!--Silver-->
-        <div class="container">
-        <div class="fundo-plano">
-        <div class="titulo-planos">
-        <p>
-            <h1>
-            Silver
-            </h1>
-            <hr>
-        </p>
+        <!--CONTEÚDO-->
+        <div class="containerPlanos">
+            <h1><span class="titulo-escolha">Escolha seu Plano</span></h1>
+            <div class="planos">
+                <div class="plano" id="silver-plan">
+                    <h1>Silver</h1>
+                    <div class="beneficios">
+                    <p>
+                        • Anúncios <br>
+                        • Acesso aos Mecânicos <br>
+                        • Fale com nosso Bot
+                    </p>
+                    </div>
+                    <div class="preco">
+                    <p>R$ 19,90<span class="mes">/mês</span></p>
+                    </div>
+                    <button onclick="selectPlan('Silver')">Assinar</button>
+                </div>
+                <!--GOLD-->
+                <div class="plano" id="gold-plan">
+                    <h1>Gold</h1>
+                    <div class="beneficios">
+                    <p>
+                        • Sem Anúncios <br>
+                        • Acesso aos Mecânicos <br>
+                        • Fale com nosso Bot
+                    </p>
+                    </div>
+                    <div class="preco">
+                    <p>R$ 29,90<span class="mes">/mês</span></p>
+                    </div>
+                    <button onclick="selectPlan('Gold')">Assinar</button>
+                </div>
+                <!--DIAMOND-->
+                <div class="plano" id="diamond-plan">
+                    <h1>Diamond</h1>
+                    <div class="beneficios">
+                    <p>
+                        • Sem Anúncios <br>
+                        • Acesso aos Mecânicos <br>
+                        • Fale com nosso Bot <br>
+                        • Fale com Fornecedores
+                    </p>
+                    </div>
+                    <div class="preco">
+                    <p>R$ 39,90 <span class="mes">/mês</span></p>
+                    </div>
+                    <button onclick="selectPlan('Diamond')">Assinar</button>
+                </div>
+            </div>
         </div>
-
-        <div class="texto-planos">
-        <p>
-            • Anúncios <br>
-            • Acesso aos Mecânicos <br>
-            • Fale com nosso Bot
-        </p>
-        </div>
-
-        <div class="valor-mes">
-        <p>
-            <h2>
-            12x de R$19,90 <span class="mes">/mês</span>
-        </div>
-
-        <div class="preco-total">
-                Preço total R$238,80
-            </h2>
-        </div>
-        </p>
-        <div class="botao-silver">
-        <a href="">Assine</a>
-        </div>
-        </div>
-
-        <!--Gold-->
-        <div class="fundo-plano">
-        <div class="titulo-planos">
-        <p>
-            <h1>
-            Gold
-            </h1>
-        </p>
-        <hr>
-        </div>
-
-        <div class="texto-planos">
-        <p>
-            • Sem Anúncios <br>
-            • Acesso aos Mecânicos <br>
-            • Fale com nosso Bot
-        </p>
-        </div>
-
-        <div class="valor-mes">
-        <p>
-            <h2>
-                12x de R$29,90<span class="mes">/mês</span>
-        </div>
-
-        <div class="preco-total">
-                Preço total R$358,80
-            </h2>
-        </div>
-        </p>
-        <div class="botao-gold">
-        <a href="">Assine</a>
-        </div>
-    </div>
-
-        <!--Diamond-->
-        <div class="fundo-plano">
-            <div class="titulo-planos">
-        <p>
-            <h1>
-            Diamond
-            </h1>
-        </p>
-        <hr>
-        </div>
-
-        <div class="texto-planos">
-        <p>
-            • Sem Anúncios <br>
-            • Acesso aos Mecânicos <br>
-            • Fale com nosso Bot <br>
-            • Fale com Fornecedores
-        </p>
-        </div>
-
-        <div class="valor-mes">
-        <p>
-            <h2>
-            12x de R$39,90<span class="mes">/mês</span>
-            </h2>
-        </div>
-
-        <div class="preco-total">
-            Preço total R$478,80
-        </div>
-        </p>
-        <div class="botao-diamond">
-        <a href="">Assine</a>
-        </div>
-        </div>
-    </div>
-    </div>
 </body>
 </html>

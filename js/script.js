@@ -97,7 +97,6 @@
     // Exemplo de uso:
     const input = '123.456.789-09'; 
     identificarEGuardarCPFouCNPJ(input);
-    
 
     // DÚVIDAS - PERGUNTAS E RESPOSTAS
     document.addEventListener('DOMContentLoaded', () => {
@@ -184,6 +183,32 @@
         localStorage.setItem('questions', JSON.stringify(questions));
         renderQuestions();
     }
+
+
+    // PAGAMENTO PLANOS
+    function selectPlan(plan) {
+        const planNames = {
+            silver: 'Silver',
+            gold: 'Gold',
+            diamond: 'Diamond'
+        };
+    
+        document.getElementById('selected-plan').textContent = planNames[plan];
+        document.getElementById('payment-section').classList.remove('hidden');
+    }
+    // Validação simples do formulário de pagamento
+    document.getElementById('payment-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const cardNumber = document.getElementById('card-number').value;
+        const expiryDate = document.getElementById('expiry-date').value;
+        const cvv = document.getElementById('cvv').value;
+    
+        if (cardNumber && expiryDate && cvv) {
+            alert('Pagamento realizado com sucesso!');
+        } else {
+            alert('Por favor, preencha todos os campos.');
+        }
+    });
 
 
     //function submitAnswer(questionId) {
