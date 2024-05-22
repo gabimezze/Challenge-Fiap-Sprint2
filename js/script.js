@@ -1,5 +1,5 @@
-
-    // Código do Chatbot:
+    
+    // Código do Chatbot
     window.watsonAssistantChatOptions = {
     integrationID: "26e70437-eaa1-448e-bcf9-ba11660abc82",
     region: "au-syd",
@@ -186,53 +186,29 @@
 
 
     // PAGAMENTO PLANOS
-    const form = document.getElementById('paymentForm');
-
-form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita o envio padrão do formulário
-
-    const nome = document.getElementById('nome').value;
-    const numeroCartao = document.getElementById('numeroCartao').value;
-    const validade = document.getElementById('validade').value;
-    const cvv = document.getElementById('cvv').value;
-    const valor = document.getElementById('valor').value;
-
-    // Validação básica dos dados (opcional)
-    if (!nome || !numeroCartao || !validade || !cvv || !valor) {
-        alert('Preencha todos os campos corretamente!');
-        return;
+    function selectPlan(plan) {
+        const planNames = {
+            silver: 'Silver',
+            gold: 'Gold',
+            diamond: 'Diamond'
+        };
+    
+        document.getElementById('selected-plan').textContent = planNames[plan];
+        document.getElementById('payment-section').classList.remove('hidden');
     }
-
-    // Simulação de requisição para API de pagamento (substitua por sua implementação real)
-    console.log('Enviando dados de pagamento...');
-    const dadosPagamento = {
-        nome: nome,
-        numeroCartao: numeroCartao,
-        validade: validade,
-        cvv: cvv,
-        valor: valor
-    };
-
-    // Utilize sua biblioteca de requisições HTTP para enviar os dados para a API
-    // Exemplo com fetch (API nativa do navegador):
-    fetch('https://sua-api-de-pagamento.com/pagar', {
-        method: 'POST',
-        body: JSON.stringify(dadosPagamento)
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.status === 'sucesso') {
+    // Validação simples do formulário de pagamento
+    document.getElementById('payment-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const cardNumber = document.getElementById('card-number').value;
+        const expiryDate = document.getElementById('expiry-date').value;
+        const cvv = document.getElementById('cvv').value;
+    
+        if (cardNumber && expiryDate && cvv) {
             alert('Pagamento realizado com sucesso!');
-            // Redirecionar para página de confirmação ou outro local desejado
         } else {
-            alert('Erro no pagamento: ' + data.mensagem);
+            alert('Por favor, preencha todos os campos.');
         }
-    })
-    .catch(error => {
-        console.error('Erro na requisição:', error);
-        alert('Falha na comunicação com o servidor. Tente novamente mais tarde.');
     });
-});
 
 
     //function submitAnswer(questionId) {
