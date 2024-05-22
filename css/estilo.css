@@ -1,5 +1,5 @@
 
-/* CABEÇALHO */                /**/                      /**/
+/* CABEÇALHO */
 * {
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -123,7 +123,7 @@ body, html {
     font-size: 30px;
 }
 
-/* BOTÕES */                /**/                      /**/
+/* BOTÕES */
 .conteudo-problema a{
     border: none; 
     color: white; 
@@ -366,7 +366,7 @@ body, html {
     text-align: left;
 }
 
-/* PLANOS E PREÇOS */                /**/                      /**/
+/* PLANOS E PREÇOS */
 .planos hr {
     margin-top: 0; 
     margin-bottom: 0;
@@ -457,7 +457,7 @@ body, html {
     box-sizing: border-box;
 }
 
-/* INTEGRANTES */             /*/                           /*/
+/* INTEGRANTES */
 @media only screen and (max-width: 600px) {
     .integrantes {
         height: 100%; 
