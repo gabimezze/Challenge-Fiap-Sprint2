@@ -209,23 +209,4 @@
             alert('Por favor, preencha todos os campos.');
         }
     });
-
-
-    //function submitAnswer(questionId) {
-        //if (answerText.trim() !== '') {
-            // Cria um novo elemento de resposta
-           // const answerElement = document.createElement('p');
-           // answerElement.classList.add('answer');
-           // answerElement.textContent = answerText;
     
-            // Adiciona a nova resposta à lista de respostas
-           // const answersDiv = document.getElementById(`answers${questionId}`);
-           // answersDiv.appendChild(answerElement);
-    
-            // Limpa o campo de entrada
-           // answerInput.value = '';
-       // } else {
-        //    alert('Por favor, insira uma resposta.');
-      //  }
-   // }
-        

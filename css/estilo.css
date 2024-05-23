@@ -308,10 +308,11 @@ body, html {
     text-align: center;
 }
 .cards{
-    margin-right: 20%;
+    margin-right: 7%;
+    margin-top: 0;
 }
 .services h2 {
-    margin-top: 5%;
+    margin-top: 3%;
     font-size: 2em;
     background-image: linear-gradient(#67caf8,#1a5ec5,#67caf8);
     background-clip: text;
