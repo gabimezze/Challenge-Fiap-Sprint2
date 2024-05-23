@@ -264,7 +264,7 @@ body, html {
 
 .fundo-efeito{
     box-shadow:0 0 10px rgb(0, 25, 71,0.5);
-    width: 50%;
+    width: 47%;
     height: 30%;
     margin-left: 20%;
     margin-right: 15%;
@@ -274,7 +274,7 @@ body, html {
     border-radius: 30px;
     background-position: center;
     background-repeat: no-repeat;
-    background-image:url(../img/banner-app.png)
+    background-image:url(../img/fundo-azul-sobre.jpg)
 }
 
 .titulo-objetivo{
