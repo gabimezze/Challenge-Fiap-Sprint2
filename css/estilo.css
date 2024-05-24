@@ -250,14 +250,14 @@ body, html {
 /* SOBRE NÓS */                /**/                      /**/
 
 .frase-efeito{
-    padding-top: 10%;
+    padding-top: 8%;
     margin-left: 3%;
     padding-right: 0;
     padding-bottom: 0;
     display: inline-flex;
     font-size: 20px;
     text-align: left;
-    background-image: linear-gradient(to left,#ffffff,#b3b3b3,#ffffff);
+    background-image: linear-gradient(to left,#0060a0,#b3b3b3,#ffffff, #b3b3b3, #52baff);
     background-clip: text;
     color: transparent;
 }
@@ -307,8 +307,9 @@ body, html {
     text-align: center;
 }
 .cards{
-    margin-right: 7%;
+    margin-right: 0;
     margin-top: 0;
+    margin-left: 8%;
 }
 .services h2 {
     margin-top: 3%;
@@ -372,6 +373,25 @@ body, html {
 }
 
 /* PLANOS E PREÇOS */                /**/                      /**/
+@media (max-width: 600px) {
+    .containerPlanos {
+        flex-direction: column;
+        align-items: left;
+    }
+    .plano {
+        width: 90%;
+    }
+}
+@media (max-width: 600px) {
+    .plano {
+        flex-direction: column;
+        align-items: left;
+    }
+    .plano {
+        width: 90%;
+    }
+}
+
 .planos hr {
     margin-top: 0; 
     margin-bottom: 0;
@@ -398,6 +418,7 @@ body, html {
 }
 
 .plano {
+    display: grid;
     background: #dee1e4;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 20px;
@@ -474,6 +495,7 @@ body, html {
 /* INTEGRANTES */
 @media only screen and (max-width: 600px) {
     .integrantes {
+        width: auto;
         height: 100%; 
     }
 }
@@ -484,7 +506,7 @@ body, html {
     padding: 20px;
     width: 100%;
     max-width: 1200px;
-    margin-left: 26%;
+    margin-left: 10%;
 }
 .titulo-integrantes hr{
     margin-top: 0;
@@ -493,6 +515,7 @@ body, html {
     margin-right: 0;
     width: 20%;
 }
+
 .titulo-integrantes{
     background-image: linear-gradient(rgb(14, 48, 158), rgb(77, 162, 241), rgb(14, 48, 158));
     background-clip: text;
@@ -556,8 +579,8 @@ body, html {
 
 @media (max-width: 600px) {
     .containerIntegrantes {
-        flex-direction: column;
-        align-items: center;
+        flex-direction:initial;
+        align-items: left;
     }
     .integrante {
         width: 90%;
@@ -568,15 +591,15 @@ body, html {
 .form-cadastro{
     display: flex;
     flex-direction: column;
-    width: 17vw;
-    height: 50vh;
+    width: 26vw;
+    height: 54vh;
     margin: 3% auto;
     background-color: #cdd8eb;
     box-shadow: inset 0 0 10px rgba(1, 36, 88, 0.8);
 }
 .textoCadastroLogin{
-    padding-left: 22%;
-    padding-top: 6%;
+    padding-left: 16%;
+    padding-top: 0;
 }
 .facaLoginCadastro{
     font-weight: 600;
