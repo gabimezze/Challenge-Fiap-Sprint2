@@ -11,7 +11,7 @@
     t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
     document.head.appendChild(t);});
 
-    // Ocultar/mostrar dúvidas
+    // FAQ - Ocultar/mostrar dúvidas 
     function alternarTexto1() {
         var texto = document.getElementById("ocultarTexto1");
         if (texto.style.display === "none") {

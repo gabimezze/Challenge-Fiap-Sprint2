@@ -81,8 +81,8 @@ body, html {
 .conteudo-problema{
     font-size: 26px;
     margin-top: 2%;
-    background-color: #dee1e4;
-    box-shadow:0 0 10px rgb(0, 25, 71,0.5);
+    background-color: #fcfeff;
+    box-shadow:0 0 10px rgba(0, 79, 170, 0.5);
     text-align: center;
     margin-left: 20%;
     margin-right: 20%;
@@ -93,8 +93,8 @@ body, html {
 
 .conteudo-planos-home{
     text-align: center;
-    background-color: #dee1e4;
-    box-shadow:0 0 10px rgb(0, 25, 71,0.5);
+    background-color: #fcfeff;
+    box-shadow:0 0 10px rgb(0, 79, 170, 0.5);
     background-position: center;
     margin-left: 20%;
     margin-right: 20%;
@@ -257,12 +257,14 @@ body, html {
     display: inline-flex;
     font-size: 20px;
     text-align: left;
-    background-image: linear-gradient(to left,#0060a0,#b3b3b3,#ffffff, #b3b3b3, #52baff);
+    background-image: linear-gradient(to left,#0060a0,#b3b3b3,#ffffff, #b3b3b3, #2e6f9b);
     background-clip: text;
     color: transparent;
 }
 
 .fundo-efeito{
+    grid-column: 1 / span 2; /* Ocupa 2 colunas */
+    grid-row: 1; /* Na primeira linha */
     box-shadow:0 0 10px rgb(0, 25, 71,0.5);
     width: 47%;
     height: 30%;
@@ -270,7 +272,7 @@ body, html {
     margin-right: 15%;
     margin-top: 0;
     margin-bottom: 0;
-    display: inline-flex;
+    display: grid;
     border-radius: 30px;
     background-position: center;
     background-repeat: no-repeat;
@@ -306,11 +308,7 @@ body, html {
     padding: 20px;
     text-align: center;
 }
-.cards{
-    margin-right: 0;
-    margin-top: 0;
-    margin-left: 8%;
-}
+
 .services h2 {
     margin-top: 3%;
     font-size: 2em;
@@ -373,22 +371,14 @@ body, html {
 }
 
 /* PLANOS E PREÇOS */                /**/                      /**/
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .containerPlanos {
-        flex-direction: column;
-        align-items: left;
-    }
-    .plano {
-        width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
-@media (max-width: 600px) {
-    .plano {
-        flex-direction: column;
-        align-items: left;
-    }
-    .plano {
-        width: 90%;
+@media (max-width: 480px) {
+    .containerPlanos {
+    grid-template-columns: 1fr;
     }
 }
 
@@ -397,37 +387,27 @@ body, html {
     margin-bottom: 0;
     padding-top: 0;
     padding-bottom: 0;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 23%;
+    margin-right: 23%;
 }
 .containerPlanos {
-    background: #fff;
-    padding: 18px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
     margin-top: 3%;
-    margin-left: 2%;
-    margin-right: 2%;
 }
 
 .planos {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
+    text-align: center;
 }
 
 .plano {
-    display: grid;
-    background: #dee1e4;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
     padding: 20px;
-    border-radius: 10px;
-    width: 30%;
-    transition: transform 0.2s;
-}
-.plano:hover{
-    transform: translateY(-10px);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 3% 10%;
 }
 
 .titulo-escolha{
@@ -454,17 +434,20 @@ body, html {
 }
 
 .plano a{
-    padding: 10px 23px;
-    background-color: #00AEEF;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    font-size: 15px;
-    font-weight: 500;
+    display: inline-block;
+    margin-top: 15px;
+    padding: 15px 100px;
+    background-color: #0055b1;
+    box-shadow: inset 0 0 10px rgba(1, 54, 88, 0.8);
+    color: #ffffff;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 1.3rem;
 }
 .plano a:hover{
-    background-color: #29569b;
+    background-color: #4f95ff;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.8);
+    
 }
 
 .hidden {
@@ -493,20 +476,21 @@ body, html {
 }
 
 /* INTEGRANTES */
-@media only screen and (max-width: 600px) {
-    .integrantes {
-        width: auto;
-        height: 100%; 
+
+@media (max-width: 768px) {
+    .containerIntegrantes {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+@media (max-width: 480px) {
+    .containerIntegrantes {
+    grid-template-columns: 1fr;
     }
 }
 .containerIntegrantes{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    padding: 20px;
-    width: 100%;
-    max-width: 1200px;
-    margin-left: 10%;
 }
 .titulo-integrantes hr{
     margin-top: 0;
@@ -515,14 +499,16 @@ body, html {
     margin-right: 0;
     width: 20%;
 }
+.integrantes {
+    text-align: center;
+}
 
 .titulo-integrantes{
     background-image: linear-gradient(rgb(14, 48, 158), rgb(77, 162, 241), rgb(14, 48, 158));
     background-clip: text;
     color: transparent;
     text-align: center;
-    padding-right: 0;
-    font-size: 50px;
+    font-size: 4rem;
     font-weight: 700;
     padding-bottom: 2%;
     padding-top: 0;
@@ -531,14 +517,16 @@ body, html {
     margin-top: 15px;
     font-size: 1.2em;
     color: #333;
+    margin: 0;
 }
 .integrante,.repositorio{
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     text-align: center;
     padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
     transition: transform 0.2s;
+    margin: 0 5rem;
 }
 .repositorio:hover{
     transform: translateY(-10px);
@@ -550,28 +538,27 @@ body, html {
 .integrante img {
     width: 100%;
     height: auto;
+    margin-bottom: 10px;
     border-radius: 50%;
-    max-width: 150px;
 }
 
 .repositorio img{
     width: 100%;
     height: auto;
+    margin-bottom: 10px;
     border-radius: 50%;
-    max-width: 150px;
-    cursor: pointer;
 }
 
 .integrante p {
     margin: 0;
-    font-size: 1.1em;
+    font-size: 1.5em;
     font-weight: 500;
     color: #000000;
     margin-bottom: 4%;
 }
 .repositorio p{
     margin: 0;
-    font-size: 1.1em;
+    font-size: 1.5em;
     font-weight: 500;
     color: #000000;
     margin-bottom: 4%;
@@ -588,15 +575,38 @@ body, html {
 }
 
 /*LOGIN E CADASTRO*/            /**/                         /**/
+@media screen and (max-width: 768px) {
+    input {
+    flex: 1;
+    margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .form-cadastro {
+    width: 100%;
+    }
+
+    input {
+    margin-bottom: 10px;
+    }
+}
 .form-cadastro{
     display: flex;
     flex-direction: column;
-    width: 26vw;
-    height: 54vh;
-    margin: 3% auto;
-    background-color: #cdd8eb;
-    box-shadow: inset 0 0 10px rgba(1, 36, 88, 0.8);
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+.form-cadastro label{
+    margin-bottom: 5px;
+    display: block;
+}
+
 .textoCadastroLogin{
     padding-left: 16%;
     padding-top: 0;
@@ -619,18 +629,21 @@ body, html {
     outline-color: #7b7e7b;
     padding-left: 10px;
 }
+.form-cadastro input[type=checkbox]{
+    cursor: pointer;
+}
 .form-cadastro button[type=submit]{
     display: block;
-    width: 6vw;
-    height: 5vh;
+    padding: 12px 30px;
     border-radius: 5px;
     border: none;
     box-shadow: inset 0 0 10px rgba(1, 54, 88, 0.8);
     background-color: #87c5ff;
     outline-color: #7b7c7e;
-    padding-left: 10px;
     transition: all .4s ease;
     margin-top: 2%;
+    text-align: center;
+    cursor: pointer;
 }
 .form-cadastro button[type=submit]:hover{
     box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.8);
